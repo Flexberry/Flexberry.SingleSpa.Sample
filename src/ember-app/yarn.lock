@@ -4254,6 +4254,11 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     rsvp "^3.0.18"
     sane "^2.4.1"
 
+ember-cli-cors2@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-cors2/-/ember-cli-cors2-0.0.4.tgz#5d0047159e6078446e7734622df912bc3a662443"
+  integrity sha512-Lobhi5OJWHQwKfnnjDtqVy32yejkDyN2jfWNl6TQvvXOvh5uFigm6p7EW4oLh+7O3RObtPakVlttntojiGARiA==
+
 ember-cli-dependency-checker@^2.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-2.2.1.tgz#1eb728258dc7d528951c391d39b365e1beedecca"

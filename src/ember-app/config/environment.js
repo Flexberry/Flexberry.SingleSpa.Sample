@@ -18,10 +18,10 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-app',
     environment,
-    rootURL: '/',
+    rootURL: '/ember',
     locationType: 'auto',
     EmberENV: {
-      LOG_STACKTRACE_ON_DEPRECATION: false,
+      LOG_STACKTRACE_ON_DEPRECATION: false,
 
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -139,27 +139,6 @@ module.exports = function(environment) {
         flexberrySimpledatetime: {
           // The selector to get the element (using `jQuery`) for the `appendTo` flatpickr option, see https://flatpickr.js.org/options/.
           calendarContext: undefined
-        }
-,
-        // Settings for `flexberryObjectlistview` component.
-        flexberryObjectlistview: {
-          // Default number of records on the list page.
-          defaultPerPage: 5,
-          // Flag indicates whether to use side page or usual mode.
-          useSidePageMode: true,
-        },
-        // Settings for flexberry-lookup component.
-        flexberryLookup: {
-          // Flag: indicates whether to use side page or usual mode.
-          useSidePageMode: true,
-        },
-        flexberryGroupedit: {
-          // Flag: indicates whether to use side page or usual mode.
-          useSidePageMode: true,
-        },
-        flexberrySimpledatetime: {
-          // The selector to get the element (using `jQuery`) for the `appendTo` flatpickr option, see https://flatpickr.js.org/options/.
-          calendarContext: undefined,
         }
       },
 

@@ -5339,6 +5339,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
+single-spa-ember@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/single-spa-ember/-/single-spa-ember-0.2.0.tgz#22e66367601caac296c8513083e10a40cf7ffdf0"
+  integrity sha1-IuZjZ2AcqsKWyFEwg+EKQM9//fA=
+
 single-spa-layout@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/single-spa-layout/-/single-spa-layout-1.6.0.tgz#0cad8b691a2c0a0d494e64adae4bfa1143c6130c"
