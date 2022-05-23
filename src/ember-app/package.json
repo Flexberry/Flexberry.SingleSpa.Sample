@@ -61,5 +61,13 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "single-spa-ember": "^0.2.0"
+  },
+  "ember-addon": {
+    "paths": [
+      "lib/cors-any"
+    ]
   }
 }

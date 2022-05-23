@@ -30,7 +30,14 @@ module.exports = function(defaults) {
           }
         ]
       }
-    }
+    },
+
+    //single-spa:
+    autoRun: false, // Set autoRun to false, because we only want the ember app to render to the DOM when single-spa tells it to.
+    storeConfigInMeta: false, // We're making a single-spa application, which doesn't exclusively own the HTML file. So we don't want to have to have a `<meta>` tag for the ember environment to be initialized.
+    fingerprint: {
+      customHash: null, // have the same file name every time you do an ember build (optional)
+    },
 
     // Add options here
   });
@@ -97,6 +104,9 @@ module.exports = function(defaults) {
   app.import('vendor/fonts/guideline-icons/guideline-icons.svg', { destDir: 'assets/fonts/guideline-icons' });
 
 
+
+  //single-spa
+  app.import('node_modules/single-spa-ember/amd/single-spa-ember.js');
 
   return app.toTree();
 };
