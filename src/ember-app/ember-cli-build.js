@@ -106,7 +106,16 @@ module.exports = function(defaults) {
 
 
   //single-spa
-  app.import('node_modules/single-spa-ember/amd/single-spa-ember.js');
+  app.import('node_modules/single-spa-ember/lib/single-spa-ember.js', {
+    using: [
+      { transformation: 'cjs', as: 'single-spa-ember' }
+    ]
+  });
+  app.import('node_modules/single-spa-css/lib/umd/single-spa-css.min.js', {
+    using: [
+      { transformation: 'amd', as: 'single-spa-css' }
+    ]
+  });
 
   return app.toTree();
 };
