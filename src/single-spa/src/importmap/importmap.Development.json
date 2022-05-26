@@ -1,0 +1,8 @@
+{
+    "imports": {
+        "@app/root-config": "//localhost:9000/app-root-config.js",
+        "@app/react-app": "//localhost:8080/app-react-app.js",
+        "@app/ember-app": "//localhost:4200/ember/assets/ember-app.js",
+        "@app/ember-app-vendor": "//localhost:4200/ember/assets/vendor.js"
+    }
+}

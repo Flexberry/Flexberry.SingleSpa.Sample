@@ -6,19 +6,20 @@ import {
 } from "single-spa-layout";
 import microfrontendLayout from "./microfrontend-layout.html";
 import { loadEmberApp } from 'single-spa-ember';
+import importmap from 'importmap';
+
+const getImportmap = fetch(importmap).then(function (response) { return response.json(); });
 
 const emberApps = [{
-  appNameSingleSpa: '@app/ember-app',
-  appName: 'ember-app',
-  appUrl: 'http://localhost:4200/ember/assets/ember-app.js',
-  vendorUrl: 'http://localhost:4200/ember/assets/vendor.js'
+  appImport: '@app/ember-app',
+  appName: 'ember-app'
 }];
 
 const routes = constructRoutes(microfrontendLayout);
 const applications = constructApplications({
   routes,
   loadApp({ name }) {
-    let emberConfig = emberApps.find(x => x.appNameSingleSpa == name);
+    let emberConfig = emberApps.find(x => x.appImport == name);
     let isEmberApp = emberConfig !== undefined;
     return isEmberApp ? loadEmberAppFn(emberConfig) : System.import(name);
   },
@@ -30,5 +31,9 @@ layoutEngine.activate();
 start();
 
 function loadEmberAppFn(config) {
-  return loadEmberApp(config.appName, config.appUrl, config.vendorUrl);
+  return getImportmap.then(importmap => {
+    const appUrl = `${location.protocol}${importmap.imports[config.appImport]}`;
+    const vendorUrl = `${location.protocol}${importmap.imports[config.appImport + '-vendor']}`;
+    return loadEmberApp(config.appName, appUrl, vendorUrl);
+  });
 }

@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "app";
@@ -12,6 +13,8 @@ module.exports = (webpackConfigEnv, argv) => {
     disableHtmlGeneration: true,
   });
 
+  const isLocal = webpackConfigEnv && webpackConfigEnv.isLocal;
+
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
     plugins: [
@@ -19,10 +22,26 @@ module.exports = (webpackConfigEnv, argv) => {
         inject: false,
         template: "src/index.ejs",
         templateParameters: {
-          isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+          isLocal,
           orgName,
         },
       }),
     ],
+    module: {
+      rules: [
+        {
+          test: /importmap\..*\.json/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'importmap.json'
+          }
+        }
+      ]
+    },
+    resolve: {
+      alias: {
+        'importmap': path.resolve(__dirname, `src/importmap/importmap.${isLocal ? 'Development' : 'Production'}.json`),
+      }
+    }
   });
 };
