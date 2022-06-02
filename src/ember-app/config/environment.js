@@ -2,16 +2,18 @@
 
 module.exports = function(environment) {
   // Replace this local address to remote when backed will be published.
+  var publicUrl = 'http://localhost:4200';
   var backendUrl = 'http://localhost:6500';
 
   if (environment === 'development-loc') {
     // Use `ember s -e development-loc` command for local backend usage.
+    publicUrl = 'http://localhost:4200';
     backendUrl = 'http://localhost:6500';
   }
 
-
   if (environment === 'docker') {
     // For docker backendUrl setting.
+    publicUrl = 'http://localhost:4201';
     backendUrl = 'http://localhost';
   }
 
@@ -37,6 +39,7 @@ module.exports = function(environment) {
       // Application name. Used in `user-settings` service.
       name: 'ember-app',
 
+      publicUrl: publicUrl,
       backendUrl: backendUrl,
 
       // It's a custom property, used to prevent duplicate backend urls in sources.

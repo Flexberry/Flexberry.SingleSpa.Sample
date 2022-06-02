@@ -28,6 +28,6 @@ services:
     volumes:
       - DB:/var/lib/pgsql/data/
     ports:
-      - 5432:5432
+      - 25432:5432
 volumes:
   DB:

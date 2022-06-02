@@ -1,10 +1,19 @@
 <single-spa-router>
   <main>
     <route path="/ember/">
+      <application name="@app/ember-app-navbar"></application>
       <application name="@app/ember-app"></application>
     </route>
-    <route path="/react">
+    <route path="/ember/statistics">
       <application name="@app/react-app"></application>
     </route>
   </main>
+
+  <style>
+    .c-main {
+      position: absolute;
+      top: 72px;
+      left: 228px;
+    }
+  </style>
 </single-spa-router>

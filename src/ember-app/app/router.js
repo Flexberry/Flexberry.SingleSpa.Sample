@@ -31,7 +31,8 @@ Router.map(function () {
   this.route('t-v-single-spa-sample-social-network-e',
   { path: 't-v-single-spa-sample-social-network-e/:id' });
   this.route('t-v-single-spa-sample-social-network-e.new',
-  { path: 't-v-single-spa-sample-social-network-e/new' });
+    { path: 't-v-single-spa-sample-social-network-e/new' });
+  this.route('statistics');
 });
 
 export default Router;

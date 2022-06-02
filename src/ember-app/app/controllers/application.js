@@ -20,41 +20,11 @@ export default Controller.extend({
           title: i18n.t('forms.application.sitemap.index.title'),
           children: null
         }, {
-          link: null,
-          icon: 'list',
-          caption: i18n.t('forms.application.sitemap.metaverse.caption'),
-          title: i18n.t('forms.application.sitemap.metaverse.title'),
-          children: [{
-            link: 't-v-single-spa-sample-chat-bot-message-l',
-            caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-chat-bot-message-l.caption'),
-            title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-chat-bot-message-l.title'),
-            icon: 'book',
-            children: null
-          }, {
-            link: 't-v-single-spa-sample-request-person-data-l',
-            caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-request-person-data-l.caption'),
-            title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-request-person-data-l.title'),
-            icon: 'edit',
-            children: null
-          }, {
-            link: 't-v-single-spa-sample-social-network-l',
-            caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-social-network-l.caption'),
-            title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-social-network-l.title'),
-            icon: 'archive',
-            children: null
-          }, {
-            link: 't-v-single-spa-sample-person-meta-data-l',
-            caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-meta-data-l.caption'),
-            title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-meta-data-l.title'),
-            icon: 'folder',
-            children: null
-          }, {
-            link: 't-v-single-spa-sample-person-l',
-            caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-l.caption'),
-            title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-l.title'),
-            icon: 'chart bar',
-            children: null
-          }]
+          link: 'statistics',
+          icon: 'table',
+          caption: 'Статистика',
+          title: 'Статистика',
+          children: []
         }
       ]
     };
@@ -130,27 +100,6 @@ export default Controller.extend({
     */
     updateWidth() {
       this.get('objectlistviewEventsService').updateWidthTrigger();
-    },
-
-    /**
-      Toggles application sitemap's side bar.
-
-      @method actions.toggleSidebar
-    */
-    toggleSidebar() {
-      let sidebar = $('.ui.sidebar.main.menu');
-      sidebar.sidebar('toggle');
-      sidebar.toggleClass('sidebar-mini');
-
-      $('.full.height').toggleClass('content-opened');
-
-      $('.sidebar.icon .text_menu').toggleClass('hidden');
-      $('.sidebar.icon').toggleClass('text-menu-show');
-      $('.sidebar.icon').toggleClass('text-menu-hide');
-      $('.bgw-opacity').toggleClass('hidden');
-
-      // For reinit overflowed tabs.
-      $(window).trigger('resize');
     },
 
     /**

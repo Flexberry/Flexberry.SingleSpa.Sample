@@ -20,13 +20,16 @@ export default App;
 
 const emberLifecycles = singleSpaEmber({
   App,
-  appName: 'ember-app'
+  appName: 'ember-app',
+  createOpts: {
+    rootElement: '#single-spa-application\\:\\@app\\/ember-app' //хак
+  }
 });
 
 const cssLifecycles = singleSpaCss({
   cssUrls: [
-    //buildPath(config.rootURL, 'assets/vendor.css'),
-    //buildPath(config.rootURL, 'assets/ember-app.css')
+    buildPath(config.APP.publicUrl, config.rootURL, 'assets/vendor.css'),
+    buildPath(config.APP.publicUrl, config.rootURL, 'assets/ember-app.css')
     //TODO
   ],
 

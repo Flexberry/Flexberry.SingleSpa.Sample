@@ -1,7 +1,7 @@
 {
   "name": "@app/react-app",
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --mode development",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
@@ -30,7 +30,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.1",
-    "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "jest-cli": "^27.0.6",
@@ -43,6 +42,9 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@coreui/coreui": "^4.1.5",
+    "@coreui/icons-react": "^2.0.1",
+    "@coreui/react": "^4.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "single-spa-react": "^4.3.1"
