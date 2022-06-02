@@ -8,13 +8,20 @@ import microfrontendLayout from "./microfrontend-layout.html";
 import { loadEmberApp } from 'single-spa-ember';
 import importmap from 'importmap';
 
-const getImportmap = fetch(importmap).then(function (response) { return response.json(); });
+const getImportmap = fetch(importmap).then((response) => response.json());
 
-const emberApps = [{
-  appImport: '@app/ember-app',
-  appName: 'ember-app'
-}];
+const emberApps = [
+  {
+    appImport: '@app/ember-app',
+    appName: 'ember-app'
+  },
+  {
+    appImport: '@app/ember-app-navbar',
+    appName: 'ember-app-navbar'
+  }
+];
 
+// Инициализация приложений (с помощью layout engine):
 const routes = constructRoutes(microfrontendLayout);
 const applications = constructApplications({
   routes,

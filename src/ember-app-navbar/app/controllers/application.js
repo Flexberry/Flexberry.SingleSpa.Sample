@@ -28,24 +28,26 @@ export default Controller.extend({
     }
   },
 
-  /**
-  Toggles application sitemap's side bar.
+  actions: {
+    /**
+    Toggles application sitemap's side bar.
 
-  @method actions.toggleSidebar
-*/
-  toggleSidebar() {
-    let sidebar = $('.ui.sidebar.main.menu');
-    sidebar.sidebar('toggle');
-    sidebar.toggleClass('sidebar-mini');
+    @method actions.toggleSidebar
+  */
+    toggleSidebar() {
+      let sidebar = $('.ui.sidebar.main.menu');
+      sidebar.sidebar('toggle');
+      sidebar.toggleClass('sidebar-mini');
 
-    $('.full.height').toggleClass('content-opened');
+      $('.full.height').toggleClass('content-opened');
 
-    $('.sidebar.icon .text_menu').toggleClass('hidden');
-    $('.sidebar.icon').toggleClass('text-menu-show');
-    $('.sidebar.icon').toggleClass('text-menu-hide');
-    $('.bgw-opacity').toggleClass('hidden');
+      $('.sidebar.icon .text_menu').toggleClass('hidden');
+      $('.sidebar.icon').toggleClass('text-menu-show');
+      $('.sidebar.icon').toggleClass('text-menu-hide');
+      $('.bgw-opacity').toggleClass('hidden');
 
-    // For reinit overflowed tabs.
-    $(window).trigger('resize');
-  },
+      // For reinit overflowed tabs.
+      $(window).trigger('resize');
+    },
+  }
 });

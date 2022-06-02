@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (environment) {
-  let publicUrl = 'http://localhost:4200';
+  let publicUrl = 'http://localhost:4205';
 
   if (environment === 'docker') {
     publicUrl = 'http://localhost:4201';

@@ -44,7 +44,7 @@
             }
 
             // To support CORS uncomment the line below.
-            // config.EnableCors(new DynamicCorsPolicyProvider());
+            config.EnableCors(new DynamicCorsPolicyProvider(true));
             // Use constructor with true first parameter for enable SupportsCredentials.
 
             // Use Unity as WebAPI dependency resolver
