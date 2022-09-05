@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let publicUrl = 'http://localhost:4205';
 
   if (environment === 'docker') {
-    publicUrl = 'http://localhost:4201';
+    publicUrl = 'http://localhost:4206';
   }
 
   let ENV = {

@@ -39,7 +39,8 @@
     "webpack-cli": "^4.8.0",
     "webpack-config-single-spa-react": "^4.0.0",
     "webpack-dev-server": "^4.0.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "husky": "^7.0.4"
   },
   "dependencies": {
     "@coreui/coreui": "^4.1.5",

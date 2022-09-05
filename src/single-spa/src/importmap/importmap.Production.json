@@ -4,7 +4,7 @@
         "@app/react-app": "//localhost:8081/app-react-app.js",
         "@app/ember-app": "//localhost:4201/ember/assets/ember-app.js",
         "@app/ember-app-vendor": "//localhost:4201/ember/assets/vendor.js",
-        "@app/ember-app-navbar": "//localhost:4200/assets/ember-app-navbar.js",
-        "@app/ember-app-navbar-vendor": "//localhost:4200/assets/vendor.js"
+        "@app/ember-app-navbar": "//localhost:4206/assets/ember-app-navbar.js",
+        "@app/ember-app-navbar-vendor": "//localhost:4206/assets/vendor.js"
     }
 }

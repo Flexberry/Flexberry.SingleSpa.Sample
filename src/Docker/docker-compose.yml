@@ -11,6 +11,11 @@ services:
     ports:
       - 4201:80
 
+  ember-app-navbar:
+    image: singlespasample/ember-app-navbar
+    ports:
+      - 4206:80
+
   react-app:
     image: singlespasample/react-app
     ports:

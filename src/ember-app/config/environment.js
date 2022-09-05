@@ -14,7 +14,7 @@ module.exports = function(environment) {
   if (environment === 'docker') {
     // For docker backendUrl setting.
     publicUrl = 'http://localhost:4201';
-    backendUrl = 'http://localhost';
+    backendUrl = 'http://localhost:6501';
   }
 
   let ENV = {

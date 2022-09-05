@@ -23,6 +23,12 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -218,15 +224,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ODataConfig.cs" />
     <Compile Include="Properties/AssemblyInfo.cs" />
-    <Content Include="App_Start/UnityConfig.cs.pp" />
-    <Content Include="App_Start/UnityWebApiActivator.cs.pp" />
+    <Content Include="App_Start\UnityConfig.cs.pp" />
+    <Content Include="App_Start\UnityWebApiActivator.cs.pp" />
     <None Include="packages.config" />
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_Start/ODataConfig.cs" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

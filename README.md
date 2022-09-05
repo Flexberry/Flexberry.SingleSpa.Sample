@@ -1,11 +1,6 @@
 # Flexberry.SingleSpaSample
 Репозиторий создан с помощью Flexberry Designer (https://designer.flexberry.net)
 
-## Развернутое приложение на GitHub Pages
-
-Демо-приложение с БД IndexedDb (в браузере):
-https://flexberry-app-sandbox.github.io/Flexberry.SingleSpaSample/
-
 ## Запуск приложения в Docker
 
 Для запуска приложения с БД требуется [Docker](https://docker.com).
@@ -29,7 +24,16 @@ https://flexberry-app-sandbox.github.io/Flexberry.SingleSpaSample/
 \src\Docker> .\stop.cmd
 ```
 
+## Запуск приложения локально
+1. Запустить ember-app: `yarn start` в папке `\src\ember-app`
+2. Запустить ember-app-navbar: `yarn start` в папке `\src\ember-app-navbar`
+3. Запустить react-app: `yarn start` в папке `\src\react-app`
+4. Запустить root-app: `yarn start` в папке `\src\single-spa`
+5. Запустить БД: выполнить один из скриптов в папке `\src\SQL` (соответствующий вашей базе)
+6. Запустить бекенд: изменить строку соединения `DefConnStr` в Web.config (настроить на вашу базу); запустить с конфигурацией `Debug`.
+
+Фреймворк `single-spa` позволяет некоторые фронтенды загружать с локального сервера (с `serve` и hot-reloading), а некоторые - с сервера (напр. с запущенного докера, где приложение уже опубликовано). Для этого отредактируйте адреса источников в файле `/src/single-spa/src/importmap/importmap.Development.json`.
+
 ## Ссылки на документацию
 
-Подробнее о сгенерированном фронтенде: https://flexberry.github.io/ru/ef3_landing_page.html  
-Подробнее о сгенерированном бекенде: https://flexberry.github.io/ru/fo_orm-odata-service.html
+Документация по фреймворку Single SPA: https://single-spa.js.org/docs/getting-started-overview
