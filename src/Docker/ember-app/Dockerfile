@@ -1,8 +1,11 @@
 ﻿FROM node:12-alpine as builder
 
+RUN apk update && apk upgrade && \
+    apk add --no-cache git
+    
 #1. Сборка ember-app
 COPY /src/ember-app /src/ember-app
-
+    
 RUN \
   set -x; \
   cd /src/ember-app/; \
@@ -32,8 +35,7 @@ RUN \
 RUN \
   set -x; \
   cd /src/ember-app-navbar/; \
-  yarn install ; \
-  bower install --allow-root;
+  yarn install ;
 
 RUN \
   set -x; \
