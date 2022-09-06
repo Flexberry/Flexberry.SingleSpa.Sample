@@ -24,8 +24,8 @@
       }
     },
     "Backend": {
-      "AspNet": true,
-      "AspNetCore": false,
+      "AspNet": false,
+      "AspNetCore": true,
       "Java": false
     },
     "Docker": {
@@ -45,6 +45,7 @@
       "PostgreSql": {
         "DiffSql": false,
         "FullSql": true,
+        "LiquibaseSql": true,
         "Security": false,
         "AdminUser": false,
         "ConnectionString": null

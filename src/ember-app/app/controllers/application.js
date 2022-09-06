@@ -28,31 +28,31 @@ export default Controller.extend({
             link: 't-v-single-spa-sample-chat-bot-message-l',
             caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-chat-bot-message-l.caption'),
             title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-chat-bot-message-l.title'),
-            icon: 'book',
+            icon: 'calendar',
             children: null
           }, {
             link: 't-v-single-spa-sample-request-person-data-l',
             caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-request-person-data-l.caption'),
             title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-request-person-data-l.title'),
-            icon: 'edit',
+            icon: 'table',
             children: null
           }, {
             link: 't-v-single-spa-sample-social-network-l',
             caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-social-network-l.caption'),
             title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-social-network-l.title'),
-            icon: 'archive',
+            icon: 'file',
             children: null
           }, {
             link: 't-v-single-spa-sample-person-meta-data-l',
             caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-meta-data-l.caption'),
             title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-meta-data-l.title'),
-            icon: 'folder',
+            icon: 'archive',
             children: null
           }, {
             link: 't-v-single-spa-sample-person-l',
             caption: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-l.caption'),
             title: i18n.t('forms.application.sitemap.metaverse.t-v-single-spa-sample-person-l.title'),
-            icon: 'chart bar',
+            icon: 'table',
             children: null
           }]
         }
