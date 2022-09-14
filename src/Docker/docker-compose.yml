@@ -21,6 +21,11 @@ services:
     ports:
       - 8081:80
 
+  react-odata-app:
+    image: singlespasample/react-odata-app
+    ports:
+      - 8082:80
+
   backend:
     image: singlespasample/backend
     links:

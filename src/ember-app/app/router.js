@@ -32,7 +32,8 @@ Router.map(function () {
   { path: 't-v-single-spa-sample-social-network-e/:id' });
   this.route('t-v-single-spa-sample-social-network-e.new',
     { path: 't-v-single-spa-sample-social-network-e/new' });
-  this.route('statistics');
+    this.route('statistics');
+    this.route('react-odata');
 });
 
 export default Router;
