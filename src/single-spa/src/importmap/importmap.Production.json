@@ -2,6 +2,7 @@
     "imports": {
         "@app/root-config": "//localhost/app-root-config.js",
         "@app/react-app": "//localhost:8081/app-react-app.js",
+        "@app/react-odata-app": "//localhost:8082/bundle.js",
         "@app/ember-app": "//localhost:4201/ember/assets/ember-app.js",
         "@app/ember-app-vendor": "//localhost:4201/ember/assets/vendor.js",
         "@app/ember-app-navbar": "//localhost:4206/assets/ember-app-navbar.js",

@@ -19,13 +19,22 @@ export default Controller.extend({
                   caption: i18n.t('forms.application.sitemap.index.caption'),
                   title: i18n.t('forms.application.sitemap.index.title'),
                   children: null
-              }, {
+              }, 
+              {
                   link: 'statistics',
                   icon: 'table',
                   caption: 'Статистика',
                   title: 'Статистика',
                   children: []
-              }, {
+              }, 
+              {
+                link: 'react-odata',
+                icon: 'table',
+                caption: 'React-odata',
+                title: 'React-odata',
+                children: []
+              }, 
+              {
           link: null,
           icon: 'list',
           caption: i18n.t('forms.application.sitemap.metaverse.caption'),

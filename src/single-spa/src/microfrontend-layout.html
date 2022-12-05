@@ -1,12 +1,16 @@
 <single-spa-router>
   <main>
     <route path="/ember/">
-      <application name="@app/ember-app-navbar"></application>
+      <!-- <application name="@app/ember-app-navbar"></application> -->
       <application name="@app/ember-app"></application>
     </route>
     <route path="/ember/statistics">
       <application name="@app/react-app"></application>
     </route>
+    <route path="/ember/react-odata">
+      <application name="@app/react-odata-app"></application>
+    </route>
+
   </main>
 
   <style>
